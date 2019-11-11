@@ -1,0 +1,46 @@
+"use strict";define("locale",["jquery","json!i18n-config","_","cookie"],function(e,n,t){var o,a,i,r=Object.keys(n.locales),u=n.defaultBrowserLang,c=e("html"),g=!0,l=u,f=c.attr("siteLang"),s=c.attr("lang")||null;return o=navigator.languages?navigator.languages[0]:navigator.language,o&&-1!==r.indexOf(o)?l=o:o&&2<o.length&&(i=o.split("-")[0].toLowerCase(),-1!==r.indexOf(i)&&(l=i)),f&&-1!==r.indexOf(f)?(l=f,g=!1):s&&-1!==r.indexOf(s)&&(l=s,g=!1),g&&(a=e.cookie(n.cookie),a&&-1!==r.indexOf(a)&&(l=a)),{get:function(){return function(){return l}}(),getUserLang:function(){return function(){return s}}(),set:function(){return function(o,a){var i=Date.now()+31536e6;e.cookie(n.cookie,o,t.extend({},{expires:new Date(i),path:"/"})),a&&window.location.reload()}}()}});
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map
+
+//# sourceMappingURL=locale.js.map

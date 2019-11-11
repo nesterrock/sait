@@ -1,0 +1,46 @@
+"use strict";define("guid",[],function(){return function(){return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(x){var n,r;return n=0|16*Math.random(),r="x"===x?n:8|3&n,r.toString(16)})}});
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map
+
+//# sourceMappingURL=guid.js.map

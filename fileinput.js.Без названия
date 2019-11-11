@@ -1,0 +1,38 @@
+"use strict";function _toConsumableArray(e){return _arrayWithoutHoles(e)||_iterableToArray(e)||_nonIterableSpread()}function _nonIterableSpread(){throw new TypeError("Invalid attempt to spread non-iterable instance")}function _iterableToArray(e){return Symbol.iterator in Object(e)||"[object Arguments]"===Object.prototype.toString.call(e)?Array.from(e):void 0}function _arrayWithoutHoles(e){if(Array.isArray(e)){for(var i=0,t=new Array(e.length);i<e.length;i++)t[i]=e[i];return t}}function _typeof(e){return(_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}define("ul-fileinput",["jquery","asyncjs"],function(e,i){var t={init:function(){var e=this;e.attachListeners()},attachListeners:function(){var e=this;this.$el.off(".fileInputEvent").on("click.fileInputEvent",".js-file-input-remove",e.removeLoadFile.bind(e)).on("click.fileInputEvent",".js-file-input-button",e.openFileDialog.bind(e)).on("change.fileInputEvent",".js-file-input-control",e.filesSelected.bind(e))},removeLoadFile:function(i){var t=this,n=e(".js-file-input-control",t.$el),l=e(i.currentTarget).closest(".js-file-input-filename"),r=l.attr("data-file");t.files&&t.files[r]&&(delete t.files[r],n.val(""),l.remove())},openFileDialog:function(i){var t=this;if(!e(i.target).hasClass("js-file-input-remove")&&!e(i.target).hasClass("js-file-input-filename")){var n=e(i.currentTarget);t.files={},e(".js-file-input-control",t.$el).val(""),n.parent(".js-file-input").find(".js-file-input-filename").remove(),n.parent(".js-file-input").find(".js-file-input-label").removeClass("d-file-input-label-error").text(""),n.parent(".js-file-input").find(".js-file-input-control").click(),t.open()}},clearLabel:function(){var e=this;e.files={},e.$el.find(".js-file-input-filename").remove(),e.$el.find(".js-file-input-label").removeClass("d-file-input-label-error").text("")},clearInput:function(){var e=this;e.files={},e.$el.find(".js-file-input-filename").remove(),e.$el.find(".js-file-input-control").val("")},checkMimeTypes:function(e){var i,t;for(i=0;i<e.length;i+=1)if(t=e[i],-1===this.allowedMimeTypes.indexOf(t.type))return t.name;return null},checkFilesSize:function(e){var i,t;for(i=0;i<e.length;i+=1)if(t=e[i],t.size>this.maxFileSize)return t.name;return null},checkSizeSum:function(e){var i,t=0;for(i=0;e.length>1&&i<e.length;i+=1)t+=e[i].size;return t>this.maxSumSize?(t/1048576).toFixed(1):null},checkMinSize:function(e){var i,t=null;for(i=0;i<e.length;i+=1)0===e[i].size&&(t=!0);return t},filesSelected:function(i){var t,n=this,l=e(i.currentTarget),r=l[0],o=r.files,a=!1,s="",f=n.i18nView,c=function(i,t){e(".js-file-input-button",n.$el).append('<span class="ul-file-name js-file-input-filename g-color-text-3" data-file="'+i+'">'+t.name.trim()+'<span class="fa fa-trash js-file-input-remove  ul-file-input-remove-icon"></span></span>')};t=["checkMimeTypes","checkSizeSum","checkMinSize","checkFilesSize"].map(function(e){var i=n[e](o);return{r:i,validator:e}}).filter(function(e){return null!==e.r}).shift(),"object"===_typeof(t)&&"checkSizeSum"===t.validator?(s=f("constructor.too big sum size").replace("{sumSize}",t.r),s=s.replace("{maxSumSize}",this.maxSumSize/1048576),a=!0):"object"===_typeof(t)&&"checkFilesSize"===t.validator?(s=f("constructor.too big file").replace("{fileName}",t.r),s=s.replace("{size}",this.maxFileSize/1048576),a=!0):"object"===_typeof(t)&&"checkMimeTypes"===t.validator?(s=f("constructor.wrong file type").replace("{fileName}",t.r),a=!0):n.maxFiles&&n.maxFiles<o.length?(s=f("constructor.too many files",n.maxFiles).replace("{count}",n.maxFiles),a=!0):"object"===_typeof(t)&&"checkMinSize"===t.validator?(s=f("constructor.too empty file"),a=!0):0===o.length?s="":1===o.length?(n.specialFileList?(c(0,o[0]),n.selectFile(o[0])):s=o[0].name,n.files[0]=o[0]):o.length>1&&(n.specialFileList?(e.each(o,function(e,i){c(e,i)}),n.selectFile(o)):s=f("all.attching files")+" "+o.length,e.each(o,function(e,i){n.files[e]=i})),a&&(l.val(""),n.specialFileList&&n.errorMessage(s),n.error(s)),l.parent(".js-file-input").find(".js-file-input-label").toggleClass("d-file-input-label-error",a).text(s)},errorMessage:function(i){var t=this;e(".js-file-input-button",t.$el).append('<span class="js-file-input-filename ul-file-name ul-file-name-error">'+i+"</span>")},getFileInput:function(){var e=this;return e.files},upload:function(t,n){var l,r,o=this.$el.find(".js-file-input-control"),a=o[0],s=a.files||[],f=[];for(r=0;r<s.length;r+=1)f.push(s[r]);i.map(f,function(i,n){l=new FormData,l.append("file",i),e.ajax({url:t,method:"POST",data:l,processData:!1,contentType:!1,doNotShowAjax404Error:!0,success:function(e){"string"==typeof e?n(e):n.apply(void 0,_toConsumableArray(e))},error:function(){n(!0,null)}})},n)}},n=function(e){this.$el=e.$el,this.allowedMimeTypes=e.allowedMimeTypes,this.maxFileSize=e.maxFileSize,this.maxSumSize=e.maxSumSize,this.maxFiles=e.maxFiles,this.specialFileList=e.specialFileList||!1,this.selectFile=e.selectFile||function(){},this.error=e.error||function(){},this.open=e.open||function(){},this.files={},this.i18nView=e.i18nView};return n.prototype=t,n});
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map
+
+//# sourceMappingURL=fileinput.js.map

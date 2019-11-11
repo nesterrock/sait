@@ -1,0 +1,38 @@
+"use strict";function ownKeys(e,r){var t=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);r&&(o=o.filter(function(r){return Object.getOwnPropertyDescriptor(e,r).enumerable})),t.push.apply(t,o)}return t}function _objectSpread(e){for(var r=1;r<arguments.length;r++){var t=null!=arguments[r]?arguments[r]:{};r%2?ownKeys(t,!0).forEach(function(r){_defineProperty(e,r,t[r])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(t)):ownKeys(t).forEach(function(r){Object.defineProperty(e,r,Object.getOwnPropertyDescriptor(t,r))})}return e}function _classCallCheck(e,r){if(!(e instanceof r))throw new TypeError("Cannot call a class as a function")}function _defineProperties(e,r){for(var t=0;t<r.length;t++){var o=r[t];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}function _createClass(e,r,t){return r&&_defineProperties(e.prototype,r),t&&_defineProperties(e,t),e}function _defineProperty(e,r,t){return r in e?Object.defineProperty(e,r,{value:t,enumerable:!0,configurable:!0,writable:!0}):e[r]=t,e}define("mapHelper",[],function(){var e=function(){function e(){_classCallCheck(this,e),_defineProperty(this,"isInit",!1),_defineProperty(this,"markers",[]),_defineProperty(this,"$el",null),_defineProperty(this,"callbacks",{onMarkerDragStart:function(){},onMarkerDragEnd:function(){},onMarkerClick:function(){},onMapOptsChange:function(){}})}return _createClass(e,[{key:"init",value:function(e){this.$el=e.$el,this.callbacks=_objectSpread({},this.callbacks,{},e.callbacks),this.mapOpts=_objectSpread({},this.mapOpts,{},e.mapOpts)}},{key:"createMap",value:function(e){}},{key:"destroy",value:function(){this.$el.removeClass("ul-map-no-api-key")}},{key:"geocode",value:function(e){return Promise.reject(new Error('Provider "'.concat(this.provider,'" does not support geocode method')))}},{key:"geocodeReverse",value:function(e,r){var t=this;return new Promise(function(e,r){r(new Error('Provider "'.concat(t.provider,'" does not support geocodeReverse method')))})}},{key:"getMarker",value:function(e){}},{key:"addMarkers",value:function(e){new Error('Provider "'.concat(this.provider,'" does not support addMarkers method'))}},{key:"removeMarkers",value:function(e){new Error('Provider "'.concat(this.provider,'" does not support addMarkers removeMarkers'))}},{key:"fitMapToMarkers",value:function(e){new Error('Provider "'.concat(this.provider,'" does not support addMarkers fitMapToMarkers'))}},{key:"fitToViewport",value:function(e){new Error('Provider "'.concat(this.provider,'" does not support addMarkers fitToViewport'))}},{key:"setMarkerPosition",value:function(e,r,t){}},{key:"setMarkerText",value:function(e,r){}},{key:"getMapBounds",value:function(){}},{key:"getMapZoom",value:function(){return this.map.getZoom()}},{key:"addListeners",value:function(){}},{key:"setMapOpts",value:function(e){}},{key:"updateApiKey",value:function(){return new Promise(function(e,r){return e()})}},{key:"insertPlaceholder",value:function(e){e?this.$el.addClass("ul-map-no-api-key").append('<div class="ul-map-placeholder"><span class="ul-icon icon-content-widget-maps"></span></div>'):this.$el.removeClass("ul-map-no-api-key")}},{key:"validateApiKey",value:function(e){var r=this;return new Promise(function(t,o){require(["".concat(r.provider,"-maps-api-key-validator")],function(r){r(e).then(t)["catch"](o)})})}}]),e}();return _defineProperty(e,"defaultMapOpts",{zoom:10,mapTypeId:"roadmap",draggable:!0,mapTypeControl:!0,zoomControl:!0,panControl:!1,streetViewControl:!1}),e});
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map
+
+//# sourceMappingURL=mapHelper.js.map

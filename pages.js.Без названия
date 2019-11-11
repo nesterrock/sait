@@ -1,0 +1,46 @@
+"use strict";define("model/pages",["jquery","_","U"],function(n,e,t){return{pages:null,templateBlanks:null,copy:function(){return function(e,r,u,i){var o=this;n.ajax({url:"/sites/url/"+e+"/pages/id/"+r+"/copy",type:"GET",api:!0,ok:function(){return function(n){o.load(e,function(){o.pages.push(n.page),t.params.pages.push(n.page),u(n.page)})}}(),noOk:function(){return function(n){i(n)}}(),error:function(){return function(){require(["nf"],function(n){n.notify("Произошла ошибка","error")})}}()})}}(),create:function(){return function(e,r,u,i){var o=this;n.ajax({url:"/sites/url/"+e+"/pages",type:"POST",data:r,api:!0,ok:function(){return function(n){null===n?i(n):(t.params.pages.push(n.page),o.pages.push(n.page),u(n.page))}}(),noOk:function(){return function(n){i(n)}}(),error:function(){return function(){require(["nf"],function(n){n.notify("Произошла ошибка","error")})}}()})}}(),edit:function(){return function(e,r,u,i,o){var a=this;n.ajax({url:"/sites/url/"+e+"/pages/id/"+r,type:"POST",data:u,api:!0,ok:function(){return function(e){"index"===r&&(e.useCommonMetaImage=u.useCommonMetaImage,t.params.commonMetaImage=e.useCommonMetaImage?e.meta.image:""),n(a.pages).each(function(n,t){return t._id==u._id?(a.pages[n]=e,!1):void 0}),i(e)}}(),noOk:function(){return function(n){o(n)}}(),error:function(){return function(){require(["nf"],function(n){n.notify("Произошла ошибка","error")})}}()})}}(),getPageBlank:function(){return function(n){return{_id:"",id:"",title:n||"Страница",template:"index",meta:{image:"",description:"",keywords:[]}}}}(),get:function(){return function(n,e,t){var r=this;if(r.pages){var u=r.pages.filter(function(n){return n._id===e})[0];t(u)}else r.load(n,function(){var n=r.pages.filter(function(n){return n._id===e})[0];t(n)})}}(),getPageBlanks:function(){return function(e,t){var r=this;r.templateBlanks?t(null,r.templateBlanks):n.get("/sites/url/"+e+"/templatePages").success(t.ok(function(n){r.templateBlanks=n.pages,t(null,r.templateBlanks)})).error(t)}}(),load:function(){return function(e){var t=1<arguments.length&&void 0!==arguments[1]?arguments[1]:function(){},r=2<arguments.length&&void 0!==arguments[2]&&arguments[2],u=this;return u.isPageDeleting?void setTimeout(function(){u.load(e,t)},50):!u.pages||r?n.ajax({url:"/sites/url/"+e+"/pages",type:"GET",api:!0,ok:function(){return function(n){return u.pages=n.pages.map(function(n){return n.type=n._type||"common",n}),t(u.pages),u.pages}}(),noOk:function(){return function(n){throw n}}()}):(t(u.pages),[null,{pages:u.pages}])}}(),remove:function(){return function(t,r,u){var i=this;i.isPageDeleting=!0,require(["nf"],function(o){n.ajax({url:"/sites/url/"+t+"/pages/id/"+r+"/delete",type:"POST",api:!0,ok:function(){return function(n){i.pages=e.reject(i.pages,function(n){return n.id==r}),u(n)}}(),noOk:function(){return function(){o.notify("Произошла ошибка","error")}}(),error:function(){return function(){o.notify("Произошла ошибка","error")}}()}).always(function(){i.isPageDeleting=!1})})}}(),savePagesOrder:function(){return function(e,t,r){require(["nf"],function(u){n.ajax({url:"/sites/url/"+t+"/pages/order",type:"POST",api:!0,data:{order:e},ok:function(){return function(){r()}}(),noOk:function(){return function(){u.notify("Произошла ошибка","error")}}(),error:function(){return function(){u.notify("Произошла ошибка","error")}}()})})}}(),getAllPages:function(){return function(){return this.pages}}()}});
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map
+
+//# sourceMappingURL=pages.js.map

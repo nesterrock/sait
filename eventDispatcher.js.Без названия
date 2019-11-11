@@ -1,0 +1,46 @@
+"use strict";define("eventDispatcher",[],function(){var t=function(){return function(t){this.name=t,this.callbacks=[]}}();t.prototype.registerCallback=function(t){this.callbacks.push(t)};var n=function(){return function(){this.events={}}}();return n.prototype.registerEvent=function(n){return this.events[n]=new t(n),this},n.prototype.dispatchEvent=function(t,n){return this.events[t].callbacks.forEach(function(t){t(n)}),this},n.prototype.addEventListener=function(t,n){return this.events[t].registerCallback(n),this},n});
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map
+
+//# sourceMappingURL=eventDispatcher.js.map

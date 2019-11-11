@@ -1,0 +1,46 @@
+"use strict";define("sprintf",[],function(){return function(n,e,i){var r;(null===i||void 0===i)&&(i=/\{\w+\}/);do r=n,n=n.replace(i,e.shift());while(r!==n);return n}});
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map
+
+//# sourceMappingURL=sprintf.js.map

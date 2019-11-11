@@ -1,0 +1,46 @@
+"use strict";define("model/blog",["jquery","U"],function(t,n){var e=["odnoklassniki","facebook","friendfeed","gplus","lj","mailru","moikrug","surfingbird","twitter","vkontakte","moimir"];return{shareList:{small:["vkontakte","facebook","twitter","odnoklassniki","moimir","gplus"],button:e,link:e,icon:e,none:e},getSettings:function(){return function(){var e,i,a;"function"==typeof arguments[0]?i=arguments[0]:(e=arguments[0],i=arguments[1]),"undefined"==typeof window.constructorMode||(a=window.constructorMode||window.previewMode?"/sites/url/"+n.params.site+"/pages/id/"+(e||n.params.page)+"/blog/settings":n.params.isULanding?"/"+n.params.site+"/blog/"+(e||n.params.page)+"/settings":"/blog/"+(e||n.params.page)+"/settings",t.ajax({type:"get",url:a,success:function(){return function(n){t.isArray(n)?!n[0]&&i(null,n[1]):i(null,n)}}(),error:function(){return function(t){i(t)}}()}))}}(),postList:function(){return function(e,i){i||(i=function(){return function(){}}());var a="/sites/url/"+n.params.site+"/pages/id/"+(e.blogPageId||n.params.page)+"/blog/postList",s=e.skip||0,o=e.limit||0;t.ajax({type:"get",api:!0,data:{skip:s,limit:o},url:a,ok:function(){return function(t){i&&i(null,t)}}(),noOk:i})}}(),postSave:function(){return function(e,i){var a=this,s=e.titleTag;e.titleTag=s||"h3",t.ajax({type:"post",api:!0,url:"/sites/url/"+n.params.site+"/pages/id/"+n.params.page+"/blog/postSave",data:e,ok:function(){return function(t){a.markSiteChanges(),i(null,t)}}(),noOk:i})}}(),postGet:function(){return function(e,i){t.ajax({type:"get",api:!0,url:"/sites/url/"+n.params.site+"/pages/id/"+n.params.page+"/blog/postGet/"+e,ok:function(){return function(t){var n=t.titleTag;t.titleTag=n,i(null,t)}}(),noOk:i})}}(),postRemove:function(){return function(e,i){var a=this;t.ajax({type:"post",api:!0,url:"/sites/url/"+n.params.site+"/pages/id/"+n.params.page+"/blog/postRemove/"+e,ok:function(){return function(t){a.markSiteChanges(),i(null,t)}}(),noOk:i})}}(),saveSettings:function(){return function(e,i){var a=this;t.ajax({type:"post",api:!0,url:"/sites/url/"+n.params.site+"/pages/id/"+n.params.page+"/blog/setSettings/",data:e,ok:function(){return function(t){a.markSiteChanges(),i&&i(null,t)}}(),noOk:i})}}(),markSiteChanges:function(){return function(){t.getJSON("/sites/url/"+n.params.site+"/pages/id/"+n.params.page).done(function(n){null===n.datePublish&&t(document).trigger("siteChanged")})}}()}});
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map
+
+//# sourceMappingURL=blog.js.map

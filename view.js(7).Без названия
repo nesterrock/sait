@@ -1,0 +1,46 @@
+"use strict";define("widget-review-view",["jquery"],function(e){return{open:function(){return function(t){var a=e("#"+t);a.off(".reviewCarousel"),a.on("click.reviewCarousel",".ul-w-review-tabnav li",function(t){var i=e(t.currentTarget),n=i.data("index");a.find([".ul-w-review-tabpane.active",".ul-w-review-tabnav .active"].join(", ")).removeClass("active"),i.addClass("active"),a.find('.ul-w-review-tabpane[data-index="'+n+'"]').addClass("active")});var i=0;a.find(".ul-w-review-lazy-load").each(function(t,a){var n="string"==typeof devicePixelRatio?devicePixelRatio:1,c=e(a).parent();c.css("cssText","width: 100% !important"),i=Math.max(a.getBoundingClientRect().width,i),c.css("cssText",""),50>=i&&i>0&&(i=a.parentElement.getBoundingClientRect().width),e(a).attr("src","/__scale"+e(a).data("src")+"?width="+Math.floor(e(a).data("width")>e(a).data("height")?Math.ceil(i*(e(a).data("width")/e(a).data("height")))*Math.round(n):i)+"&quality="+(window.cache&&window.cache.scaleImages&&window.cache.scaleImages.quality||85))})}}(),destroy:function(){return function(){}}()}});
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map
+
+//# sourceMappingURL=view.js.map

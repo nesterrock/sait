@@ -1,0 +1,46 @@
+"use strict";define("functionPrototypeOkPatcher",[],function(){Function.prototype.ok=function(t){var r=this;return function(){var n=Array.prototype.slice.call(arguments);try{var o=n.shift();if(o)return r(o);t.apply(null,n)}catch(c){r(c)}}}});
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
+
+//# sourceMappingURL=functionPrototypeOkPatcher.js.map
